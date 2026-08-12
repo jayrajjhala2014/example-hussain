@@ -1,0 +1,20 @@
+# =========================================
+# LUCKEY SHOES STORE
+# robots.txt
+# =========================================
+
+User-agent: *
+
+# Allow all public website pages
+Allow: /
+
+# Block private/system areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+# Allow website assets
+Allow: /assets/
+
+# Sitemap
+Sitemap: https://luckey-shoes-store.vercel.app/sitemap.xml

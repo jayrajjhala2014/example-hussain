@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <title>
+    Checkout | Luckey Shoes Store
+  </title>
+
+  <meta
+    name="description"
+    content="Complete your order at Luckey Shoes Store.">
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="/assets/favicon.png">
+
+  <link
+    rel="stylesheet"
+    href="style.css">
+
+</head>
+
+
+<body>
+
+  <!-- HEADER -->
+
+  <header class="checkout-header">
+
+    <a
+      href="index.html"
+      class="checkout-logo">
+
+      <img
+        src="assets/logo.png"
+        alt="Luckey Shoes Store Logo">
+
+    </a>
+
+    <a
+      href="shop.html"
+      class="back-shop">
+
+      ← Continue Shopping
+
+    </a>
+
+  </header>
+
+
+  <!-- CHECKOUT -->
+
+  <main class="checkout-page">
+
+    <div class="checkout-container">
+
+      <div class="checkout-title">
+
+        <span>
+          LUCKEY SHOES STORE
+        </span>
+
+        <h1>
+          Checkout
+        </h1>
+
+        <p>
+          Complete your details to place your order.
+        </p>
+
+      </div>
+
+
+      <div class="checkout-grid">
+
+
+        <!-- CUSTOMER FORM -->
+
+        <section class="checkout-form-card">
+
+          <h2>
+            Customer Details
+          </h2>
+
+
+          <form id="checkoutForm">
+
+
+            <div class="form-group">
+
+              <label for="customerName">
+                Full Name *
+              </label>
+
+              <input
+                type="text"
+                id="customerName"
+                name="customerName"
+                placeholder="Enter your full name"
+                required>
+
+            </div>
+
+
+            <div class="form-row">
+
+              <div class="form-group">
+
+                <label for="customerPhone">
+                  Mobile Number *
+                </label>
+
+                <input
+                  type="tel"
+                  id="customerPhone"
+                  name="customerPhone"
+                  placeholder="10-digit mobile number"
+                  inputmode="numeric"
+                  maxlength="10"
+                  required>
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="customerEmail">
+                  Email
+                </label>
+
+                <input
+                  type="email"
+                  id="customerEmail"
+                  name="customerEmail"
+                  placeholder="you@example.com">
+
+              </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="customerAddress">
+                Delivery Address *
+              </label>
+
+              <textarea
+                id="customerAddress"
+                name="customerAddress"
+                rows="4"
+                placeholder="House number, street, area..."
+                required></textarea>
+
+            </div>
+
+
+            <div class="form-row">
+
+              <div class="form-group">
+
+                <label for="customerCity">
+                  City *
+                </label>
+
+                <input
+                  type="text"
+                  id="customerCity"
+                  name="customerCity"
+                  placeholder="Your city"
+                  required>
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="customerPin">
+                  PIN Code *
+                </label>
+
+                <input
+                  type="text"
+                  id="customerPin"
+                  name="customerPin"
+                  placeholder="6-digit PIN"
+                  inputmode="numeric"
+                  maxlength="6"
+                  required>
+
+              </div>
+
+            </div>
+
+
+            <!-- PAYMENT -->
+
+            <h2 class="payment-title">
+              Payment Method
+            </h2>
+
+
+            <div class="payment-options">
+
+              <label class="payment-option">
+
+                <input
+                  type="radio"
+                  name="payment"
+                  value="Cash on Delivery"
+                  checked>
+
+                <span>
+                  💵
+                </span>
+
+                <div>
+                  <strong>
+                    Cash on Delivery
+                  </strong>
+
+                  <small>
+                    Pay when your order arrives
+                  </small>
+                </div>
+
+              </label>
+
+
+              <label class="payment-option">
+
+                <input
+                  type="radio"
+                  name="payment"
+                  value="UPI">
+
+                <span>
+                  📱
+                </span>
+
+                <div>
+                  <strong>
+                    UPI
+                  </strong>
+
+                  <small>
+                    Pay using UPI
+                  </small>
+                </div>
+
+              </label>
+
+
+              <label class="payment-option">
+
+                <input
+                  type="radio"
+                  name="payment"
+                  value="Card">
+
+                <span>
+                  💳
+                </span>
+
+                <div>
+                  <strong>
+                    Card
+                  </strong>
+
+                  <small>
+                    Credit / Debit Card
+                  </small>
+                </div>
+
+              </label>
+
+            </div>
+
+
+            <button
+              type="submit"
+              class="place-order-btn">
+
+              📲 Place Order on WhatsApp
+
+            </button>
+
+          </form>
+
+        </section>
+
+
+        <!-- ORDER SUMMARY -->
+
+        <aside class="order-summary-card">
+
+          <h2>
+            Your Order
+          </h2>
+
+
+          <div
+            id="checkoutItems"
+            class="checkout-items">
+
+          </div>
+
+
+          <div class="checkout-summary-line">
+
+            <span>
+              Subtotal
+            </span>
+
+            <strong id="checkoutSubtotal">
+              ₹0
+            </strong>
+
+          </div>
+
+
+          <div class="checkout-summary-line">
+
+            <span>
+              Delivery
+            </span>
+
+            <strong id="checkoutDelivery">
+              FREE
+            </strong>
+
+          </div>
+
+
+          <div class="checkout-total">
+
+            <span>
+              Total
+            </span>
+
+            <strong id="checkoutTotal">
+              ₹0
+            </strong>
+
+          </div>
+
+
+          <div class="secure-checkout">
+
+            🔒 Secure Order
+
+            <small>
+              Your information is used only
+              for order processing.
+            </small>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- CREATOR BADGE -->
+
+  <div class="creator-badge">
+
+    <span>
+      THIS SITE IS CREATED BY
+    </span>
+
+    <strong>
+      MR JAYRAJ SINGH JHALA
+    </strong>
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
